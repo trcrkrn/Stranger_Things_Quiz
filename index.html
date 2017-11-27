@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stranger Things Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Adamina" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="container">
+        <div id="start-page">
+            <img class="img-fluid" src="http://i0.kym-cdn.com/photos/images/original/001/153/786/b15.jpg">
+            <button type ="button" id='start-btn' class="btn btn-outline-danger" onClick="displayQuestion(currentQuestion)">START QUIZ</button>
+        </div>
+
+        <form class='question-form' id='question-container'>
+            <div class="question-opts">
+                <h4 id="question"></h4>
+                <div>
+                    <input type="radio" name="option" value="1"><label id="opt1" for="opt1"></label>
+                </div>        
+                <div>
+                    <input type="radio" name="option" value="2"><label id="opt2" for="opt2"></label>
+                </div>
+                <div>
+                    <input type="radio" name="option" value="3"><label id="opt3" for="opt3"></label>
+                </div>
+                <div>
+                    <input type="radio" name="option" value="4"><label id="opt4" for="opt4"></label>
+                </div>
+                <div>
+                    <input type="radio" name="option" value="5"><label id="opt5" for="opt5"></label>
+                </div>
+            </div>
+            <div class="question-footer">
+                <p id="score"></p>
+                <p id="page"></p>
+                <button class="btn btn-outline-danger" id="submit-btn" type="button" onClick="checkAnswer()">Submit</button>
+            </div>
+        </form>
+
+        <div id="correct-page" class="answer-page">
+            <h4 class="correct-border">Correct!</h4>
+            <button class="btn btn-outline-danger" class="next-btn" id="next-btn-c" type="button" onClick="nextQuestion(currentQuestion)">NEXT</button>
+        </div>
+
+        <div id="wrong-page" class="answer-page">
+            <div class="wrong-border">
+                <h4>Wrong!</h4>
+                <p id="insert-answer"></p>
+            </div>
+            <button class="btn btn-outline-danger" class="next-btn" id="next-btn-w" type="button" onClick="nextQuestion(currentQuestion)">NEXT</button>
+        </div>
+   
+        <div id="last-page">
+            <h3 id="final-score"></h3>
+            <button type="button" id="start-over-btn" class="btn btn-outline-danger" onClick="displayQuestion(0)">START OVER</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src='questions.js'></script>
+    <script src='index.js'></script>
+
+</body>
+</html>
