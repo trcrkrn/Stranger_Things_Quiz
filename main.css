@@ -30,11 +30,11 @@ h4 {
 }
 
 .question-opts, .answer-page{
-    color: rgba(255, 2, 2, 0.815);
+    color: white;
 }
 
 .question-footer {
-    color: rgba(255, 2, 2, 0.815);    
+    color: white;    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -61,7 +61,7 @@ input {
 }
 
 h3 {
-    color: rgba(255, 2, 2, 0.815);
+    color: white;
     margin-bottom: 50px
 }
 

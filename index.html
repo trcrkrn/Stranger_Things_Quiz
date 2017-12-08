@@ -12,12 +12,12 @@
 <body>
     <div id="container">
         <div id="start-page">
-            <img class="img-fluid" src="http://i0.kym-cdn.com/photos/images/original/001/153/786/b15.jpg">
+            <img class="img-fluid" src="http://i0.kym-cdn.com/photos/images/original/001/153/786/b15.jpg" alt="stranger things logo">
             <button type ="button" id='start-btn' class="btn btn-outline-danger" onClick="displayQuestion(currentQuestion)">START QUIZ</button>
         </div>
 
         <form class='question-form' id='question-container'>
-            <div class="question-opts">
+            <div class="question-opts" aria-labelledby="options" role="radiogroup">
                 <h4 id="question"></h4>
                 <div>
                     <input type="radio" name="option" value="1"><label id="opt1" for="opt1"></label>
